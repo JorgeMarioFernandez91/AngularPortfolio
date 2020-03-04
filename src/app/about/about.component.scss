@@ -1,0 +1,239 @@
+
+.intro {
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border-width: 5px;
+    font-size: 20px;
+    border-radius: 7%;
+}
+
+.content-container {
+    display: block;
+    width: 100%;
+    color: white;
+    border-radius: 7%;
+}
+
+.image {
+    border-radius: 7%;
+    width: 100%;
+    border-color: white;
+    border-width: 5px;
+}
+
+.frost {
+    width: 100%;
+    border-width: 5px;
+    background-color: rgba($color: #8E3B4D, $alpha: 0.7);  
+    backdrop-filter: blur(15px);
+    width: 98%;
+    min-height: 426px;
+}
+
+.image-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    //background-color: darkblue;
+}
+
+p {
+    padding: 10px;
+    
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+      /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+        //min-width: 178px;
+    }
+    .col-2 {
+        width: 16.66%;
+    // min-width: 160px;
+    }
+
+    .col-3 {    //25%
+        //width: 23%; 
+        width: 6%
+    }    
+    .col-4 {    //33.3%
+        width: 31%;
+        
+    }
+    .col-5 {
+        width: 41.66%;
+        min-width: 413px;
+    }
+
+    .col-6-img {
+        width: 50%;
+    }
+    .col-6{
+        width: 50%;
+        //min-width: 600px;
+    }
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {
+        width: 99%;
+        //min-width: 1800px;
+    }
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+     /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+        //min-width: 178px;
+    }
+    .col-2 {
+        width: 16.66%;
+    // min-width: 160px;
+    }
+
+    .col-3 {    //25%
+        //width: 23%; 
+        width: 12.5%
+    }    
+    .col-4 {    //33.3%
+        width: 31%;
+        
+    }
+    .col-5 {
+        width: 41.66%;
+        min-width: 413px;
+    }
+
+    .col-6-img {
+        width: 50%;
+    }
+    .col-6{
+        width: 50%;
+       // min-width: 672px;
+    }
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {
+        width: 99%;
+        //min-width: 1800px;
+    }
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+     /* For desktop: */
+    .col-lg-1 {
+        width: 8.33%;
+        //min-width: 178px;
+    }
+    .col-lg-2 {
+        width: 16.66%;
+    // min-width: 160px;
+    }
+
+    .col-lg-3 {    //25%
+        width: 14%; 
+    }    
+    .col-xl-4 {    //33.3%
+        width: 29.9%;
+        
+    }
+    .col-lg-5 {
+        width: 41.66%;
+        min-width: 413px;
+    }
+
+    .col-lg-6{
+        width: 50%;
+        //min-width: 672px;
+    }
+    .col-lg-7 {width: 58.33%;}
+    .col-lg-8 {width: 66.66%;}
+    .col-lg-9 {width: 75%;}
+    .col-lg-10 {width: 83.33%;}
+    .col-lg-11 {width: 91.66%;}
+    .col-lg-12 {
+        width: 99%;
+        //min-width: 1800px;
+    }
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+    /* For desktop: */
+    .col-xl-1 {
+        width: 8.33%;
+        //min-width: 178px;
+    }
+    .col-xl-2 {
+        width: 14.9%;
+    // min-width: 160px;
+    }
+
+    .col-xl-3 {    //25%
+        width: 23%; 
+    }    
+    .col-xl-4 {    //33.3%
+        width: 30.5%;
+        
+    }
+    .col-xl-5 {
+        width: 41.66%;
+        //min-width: 413px;
+    }
+
+    .col-xl-6{
+        width: 50%;
+       // min-width: 672px;
+    }
+    .col-xl-7 {width: 58.33%;}
+    .col-xl-8 {width: 66.66%;}
+    .col-xl-9 {width: 75%;}
+    .col-xl-10 {width: 83.33%;}
+    .col-xl-11 {width: 91.66%;}
+    .col-xl-12 {
+        width: 99%;
+        //min-width: 1800px;
+    }
+
+ } 
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+    //border: 1px solid red;
+}
+
+/* For mobile phones: */
+// [class*="col-"] {
+//     //width: 100%;
+//   }
+
+.row{
+    padding-left: auto;
+    padding-right: auto;
+    height: 100%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}

@@ -1,0 +1,21 @@
+
+
+<div class="container">
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a  routerLink="/contact" 
+                        (click)="activeContact()" 
+                        [class.active]="contactActivated">Contact</a></li>
+
+                <li><a  routerLink="/about" 
+                        (click)="activeAbout()" 
+                        [class.active]="aboutActivated">About</a></li>
+                
+                <li><a  routerLink="/" 
+                        (click)="activeHome()" 
+                        [class.active]="homeActivated">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

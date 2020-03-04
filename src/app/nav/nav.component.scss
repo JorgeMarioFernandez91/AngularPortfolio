@@ -1,0 +1,41 @@
+.active {
+    //color: #8E3B4D;
+    background-color: #8E3B4D;
+}
+
+.large {
+    font-size: 2em;
+}
+
+ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ padding-right: 50px;
+}
+
+li {
+ float: right;
+}
+
+li a {
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 20px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    //background-color: #111;
+    transition: background-color 2s ease;
+    background-color: #8E3B4D;
+}
+
+li a:active {
+    color: #8E3B4D;
+}
