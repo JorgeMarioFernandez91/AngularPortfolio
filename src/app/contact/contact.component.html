@@ -1,31 +1,3 @@
-<div id='container'>
-  <div id='form-wrapper'>
-    <form [formGroup]='contactForm' name="contact" id='contact-form' method="post" (ngSubmit)="onSubmit()">
-      <input type="hidden" name="form-name" value="contact" />
-      <p style='display: none;'>
-        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-      </p>
-      <p class='form-row'>
-        <label>Your Name: </label><input type='text' name="name" formControlName="name" required/>
-      </p>
-      <p class='form-row'>
-        <label>Email Address: </label><input type='email' name="email" formControlName="email" required/>
-      </p>
-      <p class='form-row'>
-        <label>A Favorite Work of Art: </label><input type='text' name="art" formControlName="art"/>
-      </p>
-      <p class='form-row'>
-        <label>Your Message: </label><textarea id='message' name="message" formControlName="message" required></textarea>
-      </p>
-      <p id='button-row'>
-        <button id='submit-button' type='submit'>Contact Me!</button>
-      </p>
-    </form>
-  </div>
-</div>
-
-
-
 <div class="row">
     <div class="col-xl-3 col-lg-3"></div>
     <div class="col-xl-6 col-lg-6">
@@ -35,155 +7,37 @@
         <div class="row" class="question-bckgrnd-clr">
             <h1>Have Any Questions?</h1>
         </div>
+
         <div class="row" class="input-bckgrnd-clr ">
-
-            <!-- <form name="contact" method="POST" data-netlify="true">
-                <p>
-                  <label>Your Name: <input type="text" name="name" /></label>   
-                </p>
-                <p>
-                  <label>Your Email: <input type="email" name="email" /></label>
-                </p>
-                <p>
-                  <label>Your Role: <select name="role[]" multiple>
-                    <option value="leader">Leader</option>
-                    <option value="follower">Follower</option>
-                  </select></label>
-                </p>
-                <p>
-                  <label>Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form> -->
-              
-            
-                <!-- <mat-form-field appearance="outline" data-netlify="true" name="name">
-                    <mat-label >Name</mat-label>
-                    <input matInput>
-                </mat-form-field>
-                
-                <br>
-            
-                <mat-form-field appearance="outline"class="size" data-netlify="true" name="message">
-                    <mat-label>Message</mat-label>
-                    <textarea matInput class="size"></textarea>
-                </mat-form-field> -->
-
-                
-                <!-- <form name="contact" method="POST" data-netlify="true">
-                  <p>
-                    <label>Your Name: <input type="text" name="name" /></label>   
-                  </p>
-                  <p>
-                    <label>Your Email: <input type="email" name="email" /></label>
-                  </p>
-                  <p>
-                    <label>Your Role: <select name="role[]" multiple>
-                      <option value="leader">Leader</option>
-                      <option value="follower">Follower</option>
-                    </select></label>
-                  </p>
-                  <p>
-                    <label>Message: <textarea name="message"></textarea></label>
-                  </p>
-                  <div data-netlify-recaptcha="true"></div>
-                  <p>
-                    <button type="submit">Send</button>
-                  </p>
-                </form> -->
-                
-
-               
-                <!-- <input  (ngSubmit)="onSubmit()"" type="submit" name="" value="Send Message" class="cta"> -->
-             
-                <!-- <form [formGroup]="form" data-netlify="true">
-
-                    <div>
-                        <label for="name">
-                          Name
-                        </label>
-
-                        <input name="name" id="name" type="text" class="size" formControlName="name" placeholder="Write your name">
-                    </div>
-                    <br>
-                    <div>
-                        <label for="address">
-                            Message
-                        </label>
-
-                        <input id="address" type="text" formControlName="address" rows="6" cols="25" placeholder="This is the default text">
-                        <textarea name="message" rows="5" cols="50" placeholder="Write a message"></textarea>
-                    </div>
-                    <br>
-                    <button class="button" type="submit">Submit</button>
-                  
-                </form> -->
+          
+          <form [formGroup]='contactForm' name="contact" id='contact-form' method="post" (ngSubmit)="onSubmit()">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style='display: none;'>
+              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            <p class='form-row'>
+              <label>Your Name: </label>
+              <br>
+              <input type='text' name="name" formControlName="name" required/>
+            </p>
+            <p class='form-row'>
+              <label>Email Address: </label>
+              <br>
+              <input type='email' name="email" formControlName="email" required/>
+            </p>
+            <p class='form-row'>
+              <label>Your Message: </label>
+              <br>
+              <textarea class="message" name="message" formControlName="message" required></textarea>
+            </p>
+            <p type='submit' >
+              <button class="button" id='submit-button' type='submit'>Contact Me!</button>
+            </p>
+          </form>
+          
         </div>
         
-
     </div>
     <div class="col-xl-3 col-lg-3"></div>
 </div>
 
-
-<!-- 
-<form [formGroup]="messageForm"(ngSubmit)="onSubmit()">
-
-    <h5 *ngIf="success">Your form is valid!</h5>
-
-    <div class="row">
-        <label>
-            <p>Name:</p> 
-              
-            <input type="text" formControlName="name" class="name">
-            <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
-                <div *ngIf="messageForm.controls.name.errors.required">
-                    Your Name Is Required
-                </div>
-            </div>
-        </label>
-    </div>
-    <br>
-    <div class="row">
-        <label>
-            <p>Message:</p>  
-            <input type="text" formControlName="message" class="message">
-            <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
-                <div *ngIf="messageForm.controls.message.errors.required">
-                    A Message Is Required
-                </div>
-            </div>
-        </label>
-        <br>
-        <br>
-        <input type="submit" name="" value="Send Message" class="cta">
-    
-    </div>
-    
-</form>
-<div *ngIf="submitted" class="results">
-    <strong>Name:</strong>
-    <span>{{ messageForm.controls.name.value }}</span>
-
-    <strong>Message:</strong>
-    <span>{{ messageForm.controls.message.value }}</span>
-</div> -->
-
-
-<!-- <div class="example-container" class="input-bckgrnd-clr">
-    <mat-form-field appearance="outline" >
-      <mat-label >Name</mat-label>
-      <input matInput>
-    </mat-form-field>
-    
-    <br>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Message</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
-
-    
-  </div> -->
