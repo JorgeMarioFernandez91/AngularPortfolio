@@ -3,10 +3,6 @@ import { FormBuilder, FormGroup, FormControl, Validators } from "@angular/forms"
 import { MessageService } from '../message.service';
 import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
 
-// import { MatFormFieldModule } from '@angular/material/form-field'; 
-// import { MatButtonModule } from '@angular/material/form-field'; 
-// import { MatInputModule } from '@angular/material/form-field'; 
-
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
@@ -15,28 +11,24 @@ import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http'
 })
 export class ContactComponent implements OnInit {
 
-    message = MessageService;
+    // message = MessageService;
 
-    messageForm: FormGroup;
-    submitted = false;
-    success = false;
+    // messageForm: FormGroup;
+    // submitted = false;
+    // success = false;
 
     contactForm = new FormGroup({
         name: new FormControl(''),
         email: new FormControl(''),
-        art: new FormControl(''),
         message: new FormControl(''),
     });
 
-    /// adding items to arguments is called 'dependency injection'
-    // constructor(private formBuilder: FormBuilder) {
-    //     this.messageForm = this.formBuilder.group({
-    //         name: ['', Validators.required],
-    //         message: ['', Validators.required]
-    //     })
-    // }
-
-    //constructor(private messageService: MessageService) {}
+    userEmail = new FormControl('', [
+        Validators.required,
+        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
+    ]);
+    
+       
     constructor(
         private http: HttpClient
       ) {};
@@ -46,7 +38,6 @@ export class ContactComponent implements OnInit {
         .set('form-name', 'contact')
         .append('name', this.contactForm.value.name)
         .append('email', this.contactForm.value.email)
-        .append('art', this.contactForm.value.art)
         .append('message', this.contactForm.value.message)
         this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
           res => {},
@@ -71,32 +62,7 @@ export class ContactComponent implements OnInit {
         );
       };
 
-    // send() {
-    //     console.log("message sent!!")
-       
-    //     this.messageService.sendMessagePost("1234");
-    //     this.messageService.sendMessageGet("4321");
-       
-    // }
-
-    // onSubmit() {
-    //     this.submitted = true;
-    //     alert("clicked!")
-    //     //console.log("message sent");
-
-    //     if(this.messageForm.invalid){
-    //         return;
-    //     }
-
-    //     this.success = true;
-    //    // this.messageForm;
-    //     console.log("message sent");
-        
-    // }
-
     ngOnInit(): void {
-        
     }
-
 
 }
