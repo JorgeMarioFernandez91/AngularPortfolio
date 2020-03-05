@@ -40,7 +40,7 @@ p {
 }
 
 .top-spacing {
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 .input-bckgrnd-clr {
@@ -313,13 +313,8 @@ input.message{
 [class*="col-"] {
     float: left;
     padding: 10px;
-    border: 1px solid red;
+    //border: 1px solid red;
 }
-
-/* For mobile phones: */
-// [class*="col-"] {
-//     //width: 100%;
-//   }
 
 .row{
     padding-left: auto;
